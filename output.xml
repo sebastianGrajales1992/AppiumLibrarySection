@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 4.1.3 (Python 3.7.7 on win32)" generated="20221014 10:46:23.026" rpa="false" schemaversion="2">
-<suite id="s1" name="Logintest" source="c:\Users\sebas\Documents\AppiumPractice\test\logintest.robot">
-<test id="s1-t1" name="Scenario: Como usuario valido la navegacion hacia la vista login">
-<kw name="Given abrir aplicacio DemoWeb" library="LoginSteps" type="SETUP">
-<kw name="abrir aplicacion" library="LoginPage">
+<robot generator="Robot 4.1.3 (Python 3.7.7 on win32)" generated="20221014 13:37:14.245" rpa="false" schemaversion="2">
+<suite id="s1" name="CatalogTest" source="c:\Users\sebas\Documents\AppiumPractice\Test\CatalogTest.robot">
+<test id="s1-t1" name="Scenanario: Validar que el articulo Labs Backpack este contenido en la lista de catalogos">
+<kw name="Given abrir aplicacion DemoWeb" library="CatalogSteps" type="SETUP">
+<kw name="abrir aplicacion" library="CatalogPage">
 <kw name="abrir aplicacion base" library="BasePage">
 <arg>Android</arg>
 <arg>emulator-5554</arg>
@@ -23,423 +23,39 @@ Please check https://github.com/appium/appium/blob/master/docs/en/writing-runnin
 | *Option*            | *Man.* | *Description*     |
 | remote_url          | Yes    | Appium server url |
 | alias               | no     | alias             |</doc>
-<status status="PASS" starttime="20221014 10:46:23.656" endtime="20221014 10:46:38.683"/>
+<kw name="Capture Page Screenshot" library="AppiumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
+<msg timestamp="20221014 13:37:51.146" level="FAIL">No application is open</msg>
+<status status="FAIL" starttime="20221014 13:37:51.130" endtime="20221014 13:37:51.155"/>
 </kw>
-<status status="PASS" starttime="20221014 10:46:23.654" endtime="20221014 10:46:38.685"/>
+<msg timestamp="20221014 13:37:51.162" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: No application is open</msg>
+<msg timestamp="20221014 13:37:51.184" level="FAIL">InvalidSessionIdException: Message: The session identified by d4503b58-e875-4999-9831-aee0c2322152 is not known
+</msg>
+<status status="FAIL" starttime="20221014 13:37:16.611" endtime="20221014 13:37:51.185"/>
 </kw>
-<status status="PASS" starttime="20221014 10:46:23.653" endtime="20221014 10:46:38.686"/>
+<status status="FAIL" starttime="20221014 13:37:16.609" endtime="20221014 13:37:51.188"/>
 </kw>
-<status status="PASS" starttime="20221014 10:46:23.652" endtime="20221014 10:46:38.687"/>
+<status status="FAIL" starttime="20221014 13:37:16.607" endtime="20221014 13:37:51.194"/>
 </kw>
-<kw name="Scenario: validar navegacion a vista login">
-<kw name="When dar click en menu inicial" library="LoginSteps">
-<kw name="click boton abrir menu" library="LoginPage">
-<kw name="click" library="BasePage">
-<arg>${locatorMenuPrincipal}</arg>
-<kw name="obtener elemento" library="BasePage">
-<var>${elemento}</var>
-<arg>${locator}</arg>
-<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
-<arg>${locator}</arg>
-<arg>10s</arg>
-<doc>Waits until element specified with `locator` is visible.</doc>
-<status status="PASS" starttime="20221014 10:46:38.699" endtime="20221014 10:46:39.455"/>
+<status status="FAIL" starttime="20221014 13:37:16.606" endtime="20221014 13:37:51.199"/>
 </kw>
-<kw name="Get Webelement" library="AppiumLibrary">
-<var>${elemento}</var>
-<arg>${locator}</arg>
-<doc>Returns the first [http://selenium-python.readthedocs.io/api.html#module-selenium.webdriver.remote.webelement|WebElement] object matching ``locator``.</doc>
-<msg timestamp="20221014 10:46:39.849" level="INFO">${elemento} = &lt;appium.webdriver.webelement.WebElement (session="507febe5-d716-4fb3-9451-aec7a44dd525", element="00000000-0000-028d-ffff-ffff00000025")&gt;</msg>
-<status status="PASS" starttime="20221014 10:46:39.456" endtime="20221014 10:46:39.853"/>
-</kw>
-<msg timestamp="20221014 10:46:39.854" level="INFO">${elemento} = &lt;appium.webdriver.webelement.WebElement (session="507febe5-d716-4fb3-9451-aec7a44dd525", element="00000000-0000-028d-ffff-ffff00000025")&gt;</msg>
-<status status="PASS" starttime="20221014 10:46:38.697" endtime="20221014 10:46:39.855"/>
-</kw>
-<kw name="Click Element" library="AppiumLibrary">
-<arg>${elemento}</arg>
-<doc>Click element identified by `locator`.</doc>
-<msg timestamp="20221014 10:46:39.862" level="INFO">Clicking element '&lt;appium.webdriver.webelement.WebElement (session="507febe5-d716-4fb3-9451-aec7a44dd525", element="00000000-0000-028d-ffff-ffff00000025")&gt;'.</msg>
-<status status="PASS" starttime="20221014 10:46:39.855" endtime="20221014 10:46:39.961"/>
-</kw>
-<status status="PASS" starttime="20221014 10:46:38.695" endtime="20221014 10:46:39.962"/>
-</kw>
-<status status="PASS" starttime="20221014 10:46:38.694" endtime="20221014 10:46:39.963"/>
-</kw>
-<status status="PASS" starttime="20221014 10:46:38.692" endtime="20221014 10:46:39.964"/>
-</kw>
-<kw name="And dar click al login en el menu" library="LoginSteps">
-<kw name="click boton ingresar login" library="LoginPage">
-<kw name="click" library="BasePage">
-<arg>${locatorButtonLogin}</arg>
-<kw name="obtener elemento" library="BasePage">
-<var>${elemento}</var>
-<arg>${locator}</arg>
-<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
-<arg>${locator}</arg>
-<arg>10s</arg>
-<doc>Waits until element specified with `locator` is visible.</doc>
-<status status="PASS" starttime="20221014 10:46:39.974" endtime="20221014 10:46:42.634"/>
-</kw>
-<kw name="Get Webelement" library="AppiumLibrary">
-<var>${elemento}</var>
-<arg>${locator}</arg>
-<doc>Returns the first [http://selenium-python.readthedocs.io/api.html#module-selenium.webdriver.remote.webelement|WebElement] object matching ``locator``.</doc>
-<msg timestamp="20221014 10:46:43.001" level="INFO">${elemento} = &lt;appium.webdriver.webelement.WebElement (session="507febe5-d716-4fb3-9451-aec7a44dd525", element="00000000-0000-028d-ffff-ffff000000a3")&gt;</msg>
-<status status="PASS" starttime="20221014 10:46:42.635" endtime="20221014 10:46:43.001"/>
-</kw>
-<msg timestamp="20221014 10:46:43.003" level="INFO">${elemento} = &lt;appium.webdriver.webelement.WebElement (session="507febe5-d716-4fb3-9451-aec7a44dd525", element="00000000-0000-028d-ffff-ffff000000a3")&gt;</msg>
-<status status="PASS" starttime="20221014 10:46:39.972" endtime="20221014 10:46:43.003"/>
-</kw>
-<kw name="Click Element" library="AppiumLibrary">
-<arg>${elemento}</arg>
-<doc>Click element identified by `locator`.</doc>
-<msg timestamp="20221014 10:46:43.008" level="INFO">Clicking element '&lt;appium.webdriver.webelement.WebElement (session="507febe5-d716-4fb3-9451-aec7a44dd525", element="00000000-0000-028d-ffff-ffff000000a3")&gt;'.</msg>
-<status status="PASS" starttime="20221014 10:46:43.003" endtime="20221014 10:46:43.098"/>
-</kw>
-<status status="PASS" starttime="20221014 10:46:39.969" endtime="20221014 10:46:43.099"/>
-</kw>
-<status status="PASS" starttime="20221014 10:46:39.967" endtime="20221014 10:46:43.101"/>
-</kw>
-<status status="PASS" starttime="20221014 10:46:39.965" endtime="20221014 10:46:43.102"/>
-</kw>
-<kw name="then validar si texto login es correcto" library="LoginSteps">
-<kw name="obtener texto titulo login" library="LoginPage">
-<var>${titulo}</var>
-<kw name="obtener texto de un elemento" library="BasePage">
-<var>${texto}</var>
-<arg>${locatorTituloLogin}</arg>
-<kw name="obtener elemento" library="BasePage">
-<var>${elemento}</var>
-<arg>${locator}</arg>
-<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
-<arg>${locator}</arg>
-<arg>10s</arg>
-<doc>Waits until element specified with `locator` is visible.</doc>
-<status status="PASS" starttime="20221014 10:46:43.111" endtime="20221014 10:46:45.127"/>
-</kw>
-<kw name="Get Webelement" library="AppiumLibrary">
-<var>${elemento}</var>
-<arg>${locator}</arg>
-<doc>Returns the first [http://selenium-python.readthedocs.io/api.html#module-selenium.webdriver.remote.webelement|WebElement] object matching ``locator``.</doc>
-<msg timestamp="20221014 10:46:45.630" level="INFO">${elemento} = &lt;appium.webdriver.webelement.WebElement (session="507febe5-d716-4fb3-9451-aec7a44dd525", element="00000000-0000-028d-ffff-ffff000000bf")&gt;</msg>
-<status status="PASS" starttime="20221014 10:46:45.128" endtime="20221014 10:46:45.631"/>
-</kw>
-<msg timestamp="20221014 10:46:45.632" level="INFO">${elemento} = &lt;appium.webdriver.webelement.WebElement (session="507febe5-d716-4fb3-9451-aec7a44dd525", element="00000000-0000-028d-ffff-ffff000000bf")&gt;</msg>
-<status status="PASS" starttime="20221014 10:46:43.109" endtime="20221014 10:46:45.633"/>
-</kw>
-<kw name="Get Text" library="AppiumLibrary">
-<var>${texto_elemento}</var>
-<arg>${elemento}</arg>
-<doc>Get element text (for hybrid and mobile browser use `xpath` locator, others might cause problem)</doc>
-<msg timestamp="20221014 10:46:45.677" level="INFO">Element '&lt;appium.webdriver.webelement.WebElement (session="507febe5-d716-4fb3-9451-aec7a44dd525", element="00000000-0000-028d-ffff-ffff000000bf")&gt;' text is 'Login' </msg>
-<msg timestamp="20221014 10:46:45.678" level="INFO">${texto_elemento} = Login</msg>
-<status status="PASS" starttime="20221014 10:46:45.634" endtime="20221014 10:46:45.678"/>
-</kw>
-<msg timestamp="20221014 10:46:45.680" level="INFO">${texto} = Login</msg>
-<status status="PASS" starttime="20221014 10:46:43.107" endtime="20221014 10:46:45.680"/>
-</kw>
-<msg timestamp="20221014 10:46:45.681" level="INFO">${titulo} = Login</msg>
-<status status="PASS" starttime="20221014 10:46:43.105" endtime="20221014 10:46:45.681"/>
-</kw>
-<kw name="Should Be Equal" library="BuiltIn">
-<arg>${titulo}</arg>
-<arg>Login</arg>
-<doc>Fails if the given objects are unequal.</doc>
-<status status="PASS" starttime="20221014 10:46:45.682" endtime="20221014 10:46:45.683"/>
-</kw>
-<status status="PASS" starttime="20221014 10:46:43.103" endtime="20221014 10:46:45.684"/>
-</kw>
-<status status="PASS" starttime="20221014 10:46:38.690" endtime="20221014 10:46:45.685"/>
-</kw>
-<status status="PASS" starttime="20221014 10:46:23.650" endtime="20221014 10:46:45.687"/>
+<status status="FAIL" starttime="20221014 13:37:16.569" endtime="20221014 13:37:51.207">Setup failed:
+InvalidSessionIdException: Message: The session identified by d4503b58-e875-4999-9831-aee0c2322152 is not known
+</status>
 </test>
-<test id="s1-t2" name="Scenanario: Como usuario realizo un login correcto">
-<kw name="Given abrir aplicacio DemoWeb" library="LoginSteps" type="SETUP">
-<kw name="abrir aplicacion" library="LoginPage">
-<kw name="abrir aplicacion base" library="BasePage">
-<arg>Android</arg>
-<arg>emulator-5554</arg>
-<arg>com.saucelabs.mydemoapp.rn</arg>
-<arg>com.saucelabs.mydemoapp.rn.MainActivity</arg>
-<arg>UiAutomator2</arg>
-<kw name="Open Application" library="AppiumLibrary">
-<arg>http://localhost:4723/wd/hub</arg>
-<arg>platformName=${plataforma}</arg>
-<arg>deviceName=${nombre_dispositivo}</arg>
-<arg>appPackage=${app_package}</arg>
-<arg>appActivity=${app_activity}</arg>
-<arg>automationName=${automation_name}</arg>
-<doc>Opens a new application to given Appium server.
-Capabilities of appium server, Android and iOS,
-Please check https://github.com/appium/appium/blob/master/docs/en/writing-running-appium/server-args.md
-| *Option*            | *Man.* | *Description*     |
-| remote_url          | Yes    | Appium server url |
-| alias               | no     | alias             |</doc>
-<status status="PASS" starttime="20221014 10:46:45.701" endtime="20221014 10:47:04.529"/>
-</kw>
-<status status="PASS" starttime="20221014 10:46:45.699" endtime="20221014 10:47:04.531"/>
-</kw>
-<status status="PASS" starttime="20221014 10:46:45.698" endtime="20221014 10:47:04.531"/>
-</kw>
-<status status="PASS" starttime="20221014 10:46:45.696" endtime="20221014 10:47:04.532"/>
-</kw>
-<kw name="Scenanario: validar login correcto">
-<kw name="When dar click en menu inicial" library="LoginSteps">
-<kw name="click boton abrir menu" library="LoginPage">
-<kw name="click" library="BasePage">
-<arg>${locatorMenuPrincipal}</arg>
-<kw name="obtener elemento" library="BasePage">
-<var>${elemento}</var>
-<arg>${locator}</arg>
-<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
-<arg>${locator}</arg>
-<arg>10s</arg>
-<doc>Waits until element specified with `locator` is visible.</doc>
-<status status="PASS" starttime="20221014 10:47:04.545" endtime="20221014 10:47:05.336"/>
-</kw>
-<kw name="Get Webelement" library="AppiumLibrary">
-<var>${elemento}</var>
-<arg>${locator}</arg>
-<doc>Returns the first [http://selenium-python.readthedocs.io/api.html#module-selenium.webdriver.remote.webelement|WebElement] object matching ``locator``.</doc>
-<msg timestamp="20221014 10:47:05.810" level="INFO">${elemento} = &lt;appium.webdriver.webelement.WebElement (session="9fc928e1-26f9-4f0a-8048-7ca7e9c5a10b", element="00000000-0000-0297-ffff-ffff00000025")&gt;</msg>
-<status status="PASS" starttime="20221014 10:47:05.337" endtime="20221014 10:47:05.811"/>
-</kw>
-<msg timestamp="20221014 10:47:05.812" level="INFO">${elemento} = &lt;appium.webdriver.webelement.WebElement (session="9fc928e1-26f9-4f0a-8048-7ca7e9c5a10b", element="00000000-0000-0297-ffff-ffff00000025")&gt;</msg>
-<status status="PASS" starttime="20221014 10:47:04.542" endtime="20221014 10:47:05.812"/>
-</kw>
-<kw name="Click Element" library="AppiumLibrary">
-<arg>${elemento}</arg>
-<doc>Click element identified by `locator`.</doc>
-<msg timestamp="20221014 10:47:05.822" level="INFO">Clicking element '&lt;appium.webdriver.webelement.WebElement (session="9fc928e1-26f9-4f0a-8048-7ca7e9c5a10b", element="00000000-0000-0297-ffff-ffff00000025")&gt;'.</msg>
-<status status="PASS" starttime="20221014 10:47:05.813" endtime="20221014 10:47:05.928"/>
-</kw>
-<status status="PASS" starttime="20221014 10:47:04.540" endtime="20221014 10:47:05.929"/>
-</kw>
-<status status="PASS" starttime="20221014 10:47:04.538" endtime="20221014 10:47:05.931"/>
-</kw>
-<status status="PASS" starttime="20221014 10:47:04.536" endtime="20221014 10:47:05.932"/>
-</kw>
-<kw name="And dar click al login en el menu" library="LoginSteps">
-<kw name="click boton ingresar login" library="LoginPage">
-<kw name="click" library="BasePage">
-<arg>${locatorButtonLogin}</arg>
-<kw name="obtener elemento" library="BasePage">
-<var>${elemento}</var>
-<arg>${locator}</arg>
-<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
-<arg>${locator}</arg>
-<arg>10s</arg>
-<doc>Waits until element specified with `locator` is visible.</doc>
-<status status="PASS" starttime="20221014 10:47:05.939" endtime="20221014 10:47:07.745"/>
-</kw>
-<kw name="Get Webelement" library="AppiumLibrary">
-<var>${elemento}</var>
-<arg>${locator}</arg>
-<doc>Returns the first [http://selenium-python.readthedocs.io/api.html#module-selenium.webdriver.remote.webelement|WebElement] object matching ``locator``.</doc>
-<msg timestamp="20221014 10:47:08.090" level="INFO">${elemento} = &lt;appium.webdriver.webelement.WebElement (session="9fc928e1-26f9-4f0a-8048-7ca7e9c5a10b", element="00000000-0000-0297-ffff-ffff000000a3")&gt;</msg>
-<status status="PASS" starttime="20221014 10:47:07.746" endtime="20221014 10:47:08.091"/>
-</kw>
-<msg timestamp="20221014 10:47:08.093" level="INFO">${elemento} = &lt;appium.webdriver.webelement.WebElement (session="9fc928e1-26f9-4f0a-8048-7ca7e9c5a10b", element="00000000-0000-0297-ffff-ffff000000a3")&gt;</msg>
-<status status="PASS" starttime="20221014 10:47:05.937" endtime="20221014 10:47:08.093"/>
-</kw>
-<kw name="Click Element" library="AppiumLibrary">
-<arg>${elemento}</arg>
-<doc>Click element identified by `locator`.</doc>
-<msg timestamp="20221014 10:47:08.100" level="INFO">Clicking element '&lt;appium.webdriver.webelement.WebElement (session="9fc928e1-26f9-4f0a-8048-7ca7e9c5a10b", element="00000000-0000-0297-ffff-ffff000000a3")&gt;'.</msg>
-<status status="PASS" starttime="20221014 10:47:08.094" endtime="20221014 10:47:08.302"/>
-</kw>
-<status status="PASS" starttime="20221014 10:47:05.935" endtime="20221014 10:47:08.303"/>
-</kw>
-<status status="PASS" starttime="20221014 10:47:05.934" endtime="20221014 10:47:08.304"/>
-</kw>
-<status status="PASS" starttime="20221014 10:47:05.933" endtime="20221014 10:47:08.305"/>
-</kw>
-<kw name="And escribir usuario en login" library="LoginSteps">
-<kw name="escribir usuario" library="LoginPage">
-<arg>bob@example.com</arg>
-<kw name="escribir en un elemento" library="BasePage">
-<arg>${locatorUserName}</arg>
-<arg>${valor}</arg>
-<kw name="obtener elemento" library="BasePage">
-<var>${elemento}</var>
-<arg>${locator}</arg>
-<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
-<arg>${locator}</arg>
-<arg>10s</arg>
-<doc>Waits until element specified with `locator` is visible.</doc>
-<status status="PASS" starttime="20221014 10:47:08.313" endtime="20221014 10:47:10.239"/>
-</kw>
-<kw name="Get Webelement" library="AppiumLibrary">
-<var>${elemento}</var>
-<arg>${locator}</arg>
-<doc>Returns the first [http://selenium-python.readthedocs.io/api.html#module-selenium.webdriver.remote.webelement|WebElement] object matching ``locator``.</doc>
-<msg timestamp="20221014 10:47:10.665" level="INFO">${elemento} = &lt;appium.webdriver.webelement.WebElement (session="9fc928e1-26f9-4f0a-8048-7ca7e9c5a10b", element="00000000-0000-0297-ffff-ffff000000c0")&gt;</msg>
-<status status="PASS" starttime="20221014 10:47:10.240" endtime="20221014 10:47:10.666"/>
-</kw>
-<msg timestamp="20221014 10:47:10.667" level="INFO">${elemento} = &lt;appium.webdriver.webelement.WebElement (session="9fc928e1-26f9-4f0a-8048-7ca7e9c5a10b", element="00000000-0000-0297-ffff-ffff000000c0")&gt;</msg>
-<status status="PASS" starttime="20221014 10:47:08.312" endtime="20221014 10:47:10.667"/>
-</kw>
-<kw name="Clear Text" library="AppiumLibrary">
-<arg>${elemento}</arg>
-<doc>Clears the text field identified by `locator`.</doc>
-<msg timestamp="20221014 10:47:10.673" level="INFO">Clear text field '&lt;appium.webdriver.webelement.WebElement (session="9fc928e1-26f9-4f0a-8048-7ca7e9c5a10b", element="00000000-0000-0297-ffff-ffff000000c0")&gt;'</msg>
-<status status="PASS" starttime="20221014 10:47:10.668" endtime="20221014 10:47:10.711"/>
-</kw>
-<kw name="Input Text" library="AppiumLibrary">
-<arg>${elemento}</arg>
-<arg>${valor}</arg>
-<doc>Types the given `text` into text field identified by `locator`.</doc>
-<msg timestamp="20221014 10:47:10.719" level="INFO">Typing text 'bob@example.com' into text field '&lt;appium.webdriver.webelement.WebElement (session="9fc928e1-26f9-4f0a-8048-7ca7e9c5a10b", element="00000000-0000-0297-ffff-ffff000000c0")&gt;'</msg>
-<status status="PASS" starttime="20221014 10:47:10.712" endtime="20221014 10:47:11.249"/>
-</kw>
-<status status="PASS" starttime="20221014 10:47:08.309" endtime="20221014 10:47:11.250"/>
-</kw>
-<status status="PASS" starttime="20221014 10:47:08.307" endtime="20221014 10:47:11.251"/>
-</kw>
-<status status="PASS" starttime="20221014 10:47:08.306" endtime="20221014 10:47:11.252"/>
-</kw>
-<kw name="And escribir password oculto en login" library="LoginSteps">
-<kw name="escribir contraseña en el login" library="LoginPage">
-<arg>10203040</arg>
-<kw name="escribir contraseña" library="BasePage">
-<arg>${locatorPassword}</arg>
-<arg>${valor}</arg>
-<kw name="obtener elemento" library="BasePage">
-<var>${elemento}</var>
-<arg>${locator}</arg>
-<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
-<arg>${locator}</arg>
-<arg>10s</arg>
-<doc>Waits until element specified with `locator` is visible.</doc>
-<status status="PASS" starttime="20221014 10:47:11.261" endtime="20221014 10:47:11.948"/>
-</kw>
-<kw name="Get Webelement" library="AppiumLibrary">
-<var>${elemento}</var>
-<arg>${locator}</arg>
-<doc>Returns the first [http://selenium-python.readthedocs.io/api.html#module-selenium.webdriver.remote.webelement|WebElement] object matching ``locator``.</doc>
-<msg timestamp="20221014 10:47:12.058" level="INFO">${elemento} = &lt;appium.webdriver.webelement.WebElement (session="9fc928e1-26f9-4f0a-8048-7ca7e9c5a10b", element="00000000-0000-0297-ffff-ffff000000c3")&gt;</msg>
-<status status="PASS" starttime="20221014 10:47:11.948" endtime="20221014 10:47:12.059"/>
-</kw>
-<msg timestamp="20221014 10:47:12.060" level="INFO">${elemento} = &lt;appium.webdriver.webelement.WebElement (session="9fc928e1-26f9-4f0a-8048-7ca7e9c5a10b", element="00000000-0000-0297-ffff-ffff000000c3")&gt;</msg>
-<status status="PASS" starttime="20221014 10:47:11.259" endtime="20221014 10:47:12.061"/>
-</kw>
-<kw name="Clear Text" library="AppiumLibrary">
-<arg>${elemento}</arg>
-<doc>Clears the text field identified by `locator`.</doc>
-<msg timestamp="20221014 10:47:12.067" level="INFO">Clear text field '&lt;appium.webdriver.webelement.WebElement (session="9fc928e1-26f9-4f0a-8048-7ca7e9c5a10b", element="00000000-0000-0297-ffff-ffff000000c3")&gt;'</msg>
-<status status="PASS" starttime="20221014 10:47:12.062" endtime="20221014 10:47:12.100"/>
-</kw>
-<kw name="Input Text" library="AppiumLibrary">
-<arg>${elemento}</arg>
-<arg>${valor}</arg>
-<doc>Types the given `text` into text field identified by `locator`.</doc>
-<msg timestamp="20221014 10:47:12.106" level="INFO">Typing text '10203040' into text field '&lt;appium.webdriver.webelement.WebElement (session="9fc928e1-26f9-4f0a-8048-7ca7e9c5a10b", element="00000000-0000-0297-ffff-ffff000000c3")&gt;'</msg>
-<status status="PASS" starttime="20221014 10:47:12.101" endtime="20221014 10:47:12.609"/>
-</kw>
-<status status="PASS" starttime="20221014 10:47:11.257" endtime="20221014 10:47:12.610"/>
-</kw>
-<status status="PASS" starttime="20221014 10:47:11.256" endtime="20221014 10:47:12.610"/>
-</kw>
-<status status="PASS" starttime="20221014 10:47:11.253" endtime="20221014 10:47:12.611"/>
-</kw>
-<kw name="And dar click en el boton de loggin en la vista loggin" library="LoginSteps">
-<kw name="dar click en el boton loggear" library="LoginPage">
-<kw name="click" library="BasePage">
-<arg>${locatorLoginSubmit}</arg>
-<kw name="obtener elemento" library="BasePage">
-<var>${elemento}</var>
-<arg>${locator}</arg>
-<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
-<arg>${locator}</arg>
-<arg>10s</arg>
-<doc>Waits until element specified with `locator` is visible.</doc>
-<status status="PASS" starttime="20221014 10:47:12.616" endtime="20221014 10:47:13.372"/>
-</kw>
-<kw name="Get Webelement" library="AppiumLibrary">
-<var>${elemento}</var>
-<arg>${locator}</arg>
-<doc>Returns the first [http://selenium-python.readthedocs.io/api.html#module-selenium.webdriver.remote.webelement|WebElement] object matching ``locator``.</doc>
-<msg timestamp="20221014 10:47:13.546" level="INFO">${elemento} = &lt;appium.webdriver.webelement.WebElement (session="9fc928e1-26f9-4f0a-8048-7ca7e9c5a10b", element="00000000-0000-0297-ffff-ffff000000c6")&gt;</msg>
-<status status="PASS" starttime="20221014 10:47:13.373" endtime="20221014 10:47:13.546"/>
-</kw>
-<msg timestamp="20221014 10:47:13.547" level="INFO">${elemento} = &lt;appium.webdriver.webelement.WebElement (session="9fc928e1-26f9-4f0a-8048-7ca7e9c5a10b", element="00000000-0000-0297-ffff-ffff000000c6")&gt;</msg>
-<status status="PASS" starttime="20221014 10:47:12.615" endtime="20221014 10:47:13.547"/>
-</kw>
-<kw name="Click Element" library="AppiumLibrary">
-<arg>${elemento}</arg>
-<doc>Click element identified by `locator`.</doc>
-<msg timestamp="20221014 10:47:13.553" level="INFO">Clicking element '&lt;appium.webdriver.webelement.WebElement (session="9fc928e1-26f9-4f0a-8048-7ca7e9c5a10b", element="00000000-0000-0297-ffff-ffff000000c6")&gt;'.</msg>
-<status status="PASS" starttime="20221014 10:47:13.548" endtime="20221014 10:47:13.643"/>
-</kw>
-<status status="PASS" starttime="20221014 10:47:12.613" endtime="20221014 10:47:13.644"/>
-</kw>
-<status status="PASS" starttime="20221014 10:47:12.612" endtime="20221014 10:47:13.646"/>
-</kw>
-<status status="PASS" starttime="20221014 10:47:12.611" endtime="20221014 10:47:13.647"/>
-</kw>
-<kw name="Then validar que se redirija correctamente a la vista de compras" library="LoginSteps">
-<kw name="obtener texto titulo de compras" library="LoginPage">
-<var>${titulo}</var>
-<kw name="obtener texto de un elemento" library="BasePage">
-<var>${titulo}</var>
-<arg>${LocatorTituloPaginaLoginCorrecto}</arg>
-<kw name="obtener elemento" library="BasePage">
-<var>${elemento}</var>
-<arg>${locator}</arg>
-<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
-<arg>${locator}</arg>
-<arg>10s</arg>
-<doc>Waits until element specified with `locator` is visible.</doc>
-<status status="PASS" starttime="20221014 10:47:13.655" endtime="20221014 10:47:15.036"/>
-</kw>
-<kw name="Get Webelement" library="AppiumLibrary">
-<var>${elemento}</var>
-<arg>${locator}</arg>
-<doc>Returns the first [http://selenium-python.readthedocs.io/api.html#module-selenium.webdriver.remote.webelement|WebElement] object matching ``locator``.</doc>
-<msg timestamp="20221014 10:47:15.189" level="INFO">${elemento} = &lt;appium.webdriver.webelement.WebElement (session="9fc928e1-26f9-4f0a-8048-7ca7e9c5a10b", element="00000000-0000-0297-ffff-ffff00000032")&gt;</msg>
-<status status="PASS" starttime="20221014 10:47:15.037" endtime="20221014 10:47:15.189"/>
-</kw>
-<msg timestamp="20221014 10:47:15.191" level="INFO">${elemento} = &lt;appium.webdriver.webelement.WebElement (session="9fc928e1-26f9-4f0a-8048-7ca7e9c5a10b", element="00000000-0000-0297-ffff-ffff00000032")&gt;</msg>
-<status status="PASS" starttime="20221014 10:47:13.653" endtime="20221014 10:47:15.192"/>
-</kw>
-<kw name="Get Text" library="AppiumLibrary">
-<var>${texto_elemento}</var>
-<arg>${elemento}</arg>
-<doc>Get element text (for hybrid and mobile browser use `xpath` locator, others might cause problem)</doc>
-<msg timestamp="20221014 10:47:15.220" level="INFO">Element '&lt;appium.webdriver.webelement.WebElement (session="9fc928e1-26f9-4f0a-8048-7ca7e9c5a10b", element="00000000-0000-0297-ffff-ffff00000032")&gt;' text is 'Products' </msg>
-<msg timestamp="20221014 10:47:15.221" level="INFO">${texto_elemento} = Products</msg>
-<status status="PASS" starttime="20221014 10:47:15.193" endtime="20221014 10:47:15.221"/>
-</kw>
-<msg timestamp="20221014 10:47:15.223" level="INFO">${titulo} = Products</msg>
-<status status="PASS" starttime="20221014 10:47:13.651" endtime="20221014 10:47:15.224"/>
-</kw>
-<msg timestamp="20221014 10:47:15.226" level="INFO">${titulo} = Products</msg>
-<status status="PASS" starttime="20221014 10:47:13.650" endtime="20221014 10:47:15.226"/>
-</kw>
-<kw name="Should Be Equal" library="BuiltIn">
-<arg>${titulo}</arg>
-<arg>Products</arg>
-<doc>Fails if the given objects are unequal.</doc>
-<status status="PASS" starttime="20221014 10:47:15.227" endtime="20221014 10:47:15.229"/>
-</kw>
-<status status="PASS" starttime="20221014 10:47:13.648" endtime="20221014 10:47:15.230"/>
-</kw>
-<status status="PASS" starttime="20221014 10:47:04.534" endtime="20221014 10:47:15.231"/>
-</kw>
-<status status="PASS" starttime="20221014 10:46:45.693" endtime="20221014 10:47:15.233"/>
-</test>
-<status status="PASS" starttime="20221014 10:46:23.039" endtime="20221014 10:47:15.238"/>
+<status status="FAIL" starttime="20221014 13:37:14.275" endtime="20221014 13:37:51.216"/>
 </suite>
 <statistics>
 <total>
-<stat pass="2" fail="0" skip="0">All Tests</stat>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat pass="2" fail="0" skip="0" id="s1" name="Logintest">Logintest</stat>
+<stat pass="0" fail="1" skip="0" id="s1" name="CatalogTest">CatalogTest</stat>
 </suite>
 </statistics>
 <errors>
+<msg timestamp="20221014 13:37:51.162" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: No application is open</msg>
 </errors>
 </robot>
